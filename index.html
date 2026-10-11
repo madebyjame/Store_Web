@@ -1,0 +1,1761 @@
+<!doctype html>
+<html lang="th" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DTI SAU WOW COFFEE | หอมกรุ่น สดชื่น ทุกช่วงเวลา</title>
+
+    <!-- Website Logo / Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
+    <link rel="apple-touch-icon" href="images/logo.jpg" />
+
+    <!-- Google Fonts: Prompt (Thai & English font for modern & clean aesthetics) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration with Custom Coffee Palette -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              coffee: {
+                50: "#fbf8f4",
+                100: "#f4ede4",
+                200: "#e8dbcb",
+                300: "#d7beaa",
+                400: "#bf9d83",
+                500: "#a77f60",
+                600: "#8e6547",
+                700: "#735038",
+                800: "#4f3525",
+                900: "#322117",
+                950: "#1e130c",
+              },
+              cream: {
+                DEFAULT: "#fdfbf7",
+                warm: "#f7f2ea",
+                dark: "#ede5d8",
+              },
+            },
+            fontFamily: {
+              sans: ["Prompt", "sans-serif"],
+            },
+            boxShadow: {
+              warm: "0 10px 25px -5px rgba(115, 80, 56, 0.1), 0 8px 10px -6px rgba(115, 80, 56, 0.05)",
+              "warm-lg": "0 20px 30px -10px rgba(115, 80, 56, 0.15)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* ซ่อน Scrollbar แนวนอนกรณีมี overflow เล็กน้อย */
+      body {
+        overflow-x: hidden;
+        background-color: #fdfbf7;
+        color: #322117;
+      }
+
+      /* เอฟเฟกต์ตกแต่งรูปภาพ */
+      .img-zoom-wrapper {
+        overflow: hidden;
+      }
+      .img-zoom-wrapper img {
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .img-zoom-wrapper:hover img {
+        transform: scale(1.08);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-cream font-sans text-coffee-900 antialiased selection:bg-coffee-200 selection:text-coffee-950 flex flex-col min-h-screen"
+  >
+    <!-- ========================================================
+       1. NAVBAR SECTION
+       ======================================================== -->
+    <header
+      class="sticky top-0 z-50 bg-cream/90 backdrop-blur-md border-b border-coffee-200/60 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo & Brand Name -->
+          <a
+            href="#home"
+            class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-coffee-500 rounded-lg p-1"
+          >
+            <div
+              class="w-11 h-11 rounded-2xl overflow-hidden shadow-md group-hover:scale-105 transition-transform duration-300 border border-coffee-200/80 bg-coffee-100 flex-shrink-0"
+            >
+              <img
+                src="images/logo.jpg"
+                alt="DTI SAU WOW COFFEE Logo"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col">
+              <span
+                class="text-xl sm:text-2xl font-bold tracking-tight text-coffee-900 group-hover:text-coffee-700 transition-colors"
+              >
+                DTI SAU
+                <span class="text-coffee-600 font-extrabold">WOW</span> COFFEE
+              </span>
+              <span
+                class="text-[10px] tracking-widest uppercase text-coffee-500 font-medium"
+                >Specialty & Cozy Vibe</span
+              >
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <nav
+            class="hidden md:flex items-center space-x-1 lg:space-x-3 text-sm font-medium"
+          >
+            <a
+              href="#home"
+              class="px-3 py-2 rounded-full text-coffee-800 hover:text-coffee-600 hover:bg-coffee-100/60 transition-colors"
+              >หน้าแรก</a
+            >
+            <a
+              href="#about"
+              class="px-3 py-2 rounded-full text-coffee-800 hover:text-coffee-600 hover:bg-coffee-100/60 transition-colors"
+              >เกี่ยวกับเรา</a
+            >
+            <a
+              href="#menu"
+              class="px-3 py-2 rounded-full text-coffee-800 hover:text-coffee-600 hover:bg-coffee-100/60 transition-colors"
+              >เมนูแนะนำ</a
+            >
+            <a
+              href="#why-us"
+              class="px-3 py-2 rounded-full text-coffee-800 hover:text-coffee-600 hover:bg-coffee-100/60 transition-colors"
+              >จุดเด่นของร้าน</a
+            >
+            <a
+              href="#gallery"
+              class="px-3 py-2 rounded-full text-coffee-800 hover:text-coffee-600 hover:bg-coffee-100/60 transition-colors"
+              >ภาพบรรยากาศ</a
+            >
+            <a
+              href="#contact"
+              class="px-3 py-2 rounded-full text-coffee-800 hover:text-coffee-600 hover:bg-coffee-100/60 transition-colors"
+              >ติดต่อเรา</a
+            >
+          </nav>
+
+          <!-- CTA Button (Desktop) -->
+          <div class="hidden md:flex items-center">
+            <a
+              href="#menu"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-coffee-800 text-cream font-medium text-sm hover:bg-coffee-700 active:scale-95 transition-all shadow-sm hover:shadow-warm"
+            >
+              <span>ดูเมนูเครื่องดื่ม</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Mobile Menu Toggle Button -->
+          <div class="flex items-center md:hidden">
+            <button
+              id="mobile-menu-btn"
+              type="button"
+              aria-label="Toggle navigation menu"
+              class="p-2.5 rounded-xl text-coffee-800 hover:bg-coffee-100 focus:outline-none focus:ring-2 focus:ring-coffee-500 transition-colors"
+            >
+              <!-- Icon when menu is closed -->
+              <d
+                id="hamburger-icon"
+                class="w-6 h-6 block"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </d>
+              <!-- Icon when menu is open -->
+              <svg
+                id="close-icon"
+                class="w-6 h-6 hidden"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Navigation -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden border-t border-coffee-200/80 bg-cream/95 px-4 pt-3 pb-6 space-y-2 shadow-lg transition-all duration-300"
+      >
+        <a
+          href="#home"
+          class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium text-coffee-800 hover:bg-coffee-100 hover:text-coffee-950 transition-colors"
+          >หน้าแรก</a
+        >
+        <a
+          href="#about"
+          class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium text-coffee-800 hover:bg-coffee-100 hover:text-coffee-950 transition-colors"
+          >เกี่ยวกับเรา</a
+        >
+        <a
+          href="#menu"
+          class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium text-coffee-800 hover:bg-coffee-100 hover:text-coffee-950 transition-colors"
+          >เมนูแนะนำ</a
+        >
+        <a
+          href="#why-us"
+          class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium text-coffee-800 hover:bg-coffee-100 hover:text-coffee-950 transition-colors"
+          >จุดเด่นของร้าน</a
+        >
+        <a
+          href="#gallery"
+          class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium text-coffee-800 hover:bg-coffee-100 hover:text-coffee-950 transition-colors"
+          >ภาพบรรยากาศ</a
+        >
+        <a
+          href="#contact"
+          class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium text-coffee-800 hover:bg-coffee-100 hover:text-coffee-950 transition-colors"
+          >ติดต่อเรา</a
+        >
+        <div class="pt-2">
+          <a
+            href="#menu"
+            class="mobile-nav-link flex items-center justify-center gap-2 w-full px-5 py-3 rounded-xl bg-coffee-800 text-cream font-medium text-center shadow-sm hover:bg-coffee-700 transition-colors"
+          >
+            <span>ดูเมนูเครื่องดื่มทั้งหมด</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <!-- ========================================================
+         2. HERO SECTION
+         ======================================================== -->
+      <section
+        id="home"
+        class="relative pt-8 pb-16 sm:py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-cream via-cream-warm to-cream"
+      >
+        <!-- Decorative Background Blobs -->
+        <div
+          class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-coffee-200/30 blur-3xl pointer-events-none"
+        ></div>
+        <div
+          class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-coffee-300/20 blur-3xl pointer-events-none"
+        ></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center"
+          >
+            <!-- Hero Text Content -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+              <div
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-coffee-100 border border-coffee-200/80 text-coffee-800 text-xs sm:text-sm font-medium shadow-sm"
+              >
+                <span
+                  class="inline-block w-2 h-2 rounded-full bg-amber-600 animate-pulse"
+                ></span>
+                <span>กลิ่นหอมกรุ่น สดชื่น อร่อยถูกใจในทุกแก้ว</span>
+              </div>
+
+              <h1
+                class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-coffee-950 leading-tight"
+              >
+                เติมเต็มความสุขในทุกวันกับ <br class="hidden sm:inline" />
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-coffee-700 via-coffee-600 to-amber-700"
+                >
+                  DTI SAU WOW COFFEE
+                </span>
+              </h1>
+
+              <p
+                class="text-base sm:text-lg text-coffee-700 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed"
+              >
+                ร้านกาแฟเล็ก ๆ ที่อบอุ่นและเป็นกันเอง พร้อมเสิร์ฟเมล็ดกาแฟคัดสรร
+                ชาเข้มข้น โกโก้รสกลมกล่อม และเครื่องดื่มสดชื่นหลากหลายเมนู
+                เพื่อเติมพลังบวกและความผ่อนคลายให้แก่คุณทุกวัน
+              </p>
+
+              <!-- Hero CTAs -->
+              <div
+                class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2"
+              >
+                <a
+                  href="#menu"
+                  class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-coffee-800 hover:bg-coffee-700 text-cream font-semibold text-base shadow-warm hover:shadow-warm-lg active:scale-95 transition-all text-center flex items-center justify-center gap-2"
+                >
+                  <span>ดูเมนูเครื่องดื่ม</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#contact"
+                  class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white/80 hover:bg-white text-coffee-800 border border-coffee-200/90 font-medium text-base shadow-sm hover:shadow transition-all text-center"
+                >
+                  แผนที่ & เวลาเปิด–ปิด
+                </a>
+              </div>
+
+              <!-- Highlights mini-strip -->
+              <div
+                class="pt-6 border-t border-coffee-200/60 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 text-center"
+              >
+                <div class="p-2">
+                  <p class="text-xl sm:text-2xl font-bold text-coffee-900">
+                    100%
+                  </p>
+                  <p class="text-xs sm:text-sm text-coffee-600">
+                    เมล็ดคัดคุณภาพ
+                  </p>
+                </div>
+                <div class="p-2 border-x border-coffee-200/80">
+                  <p class="text-xl sm:text-2xl font-bold text-coffee-900">
+                    35.-
+                  </p>
+                  <p class="text-xs sm:text-sm text-coffee-600">
+                    ราคาเริ่มต้นเบาๆ
+                  </p>
+                </div>
+                <div class="p-2">
+                  <p class="text-xl sm:text-2xl font-bold text-coffee-900">
+                    Warm
+                  </p>
+                  <p class="text-xs sm:text-sm text-coffee-600">
+                    บรรยากาศสบายๆ
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Image & Creative Card -->
+            <div class="lg:col-span-5 relative">
+              <div class="relative mx-auto max-w-md lg:max-w-none">
+                <!-- Background accent border card -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-tr from-coffee-400 to-amber-200 rounded-3xl transform rotate-2 scale-98 opacity-50 blur-sm"
+                ></div>
+
+                <!-- Main Hero Image Frame -->
+                <div
+                  class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-coffee-900 img-zoom-wrapper"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=80"
+                    alt="บรรยากาศเคาน์เตอร์บาร์และการชงกาแฟสด DTI SAU WOW COFFEE"
+                    class="w-full h-[400px] sm:h-[480px] object-cover"
+                    loading="eager"
+                    onerror="
+                      this.onerror = null;
+                      this.src =
+                        'https://placehold.co/800x1000/322117/ffffff?text=DTI+SAU+WOW+COFFEE';
+                    "
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-coffee-950/70 via-transparent to-transparent"
+                  ></div>
+
+                  <!-- Floating Info Card on Hero Image -->
+                  <div
+                    class="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-white/40 shadow-lg flex items-center justify-between"
+                  >
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-lg"
+                      >
+                        ☕
+                      </div>
+                      <div>
+                        <p class="text-xs text-coffee-500 font-medium">
+                          Signature Beverage
+                        </p>
+                        <p class="text-sm font-bold text-coffee-950">
+                          Dirty Coffee นมเย็นจัด กลิ่นหอมฟุ้ง
+                        </p>
+                      </div>
+                    </div>
+                    <span
+                      class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200"
+                      >WOW Special</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+         3. ABOUT US SECTION
+         ======================================================== -->
+      <section
+        id="about"
+        class="py-16 sm:py-24 bg-white border-y border-coffee-200/50"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Image Collage -->
+            <div class="lg:col-span-5 order-2 lg:order-1">
+              <div class="relative">
+                <div
+                  class="rounded-3xl overflow-hidden shadow-warm-lg border-2 border-coffee-100 img-zoom-wrapper"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+                    alt="เมล็ดกาแฟและแก้วกาแฟสดคั่วหอมกรุ่น"
+                    class="w-full h-80 sm:h-96 object-cover"
+                    loading="lazy"
+                    onerror="
+                      this.onerror = null;
+                      this.src =
+                        'https://placehold.co/800x600/735038/ffffff?text=About+Us';
+                    "
+                  />
+                </div>
+                <!-- Floating Badge -->
+                <div
+                  class="absolute -bottom-6 -right-4 sm:right-6 bg-coffee-800 text-cream p-5 rounded-2xl shadow-xl max-w-xs border border-coffee-700"
+                >
+                  <p class="text-2xl font-bold tracking-tight">
+                    ทำด้วยความตั้งใจ
+                  </p>
+                  <p class="text-xs text-coffee-200 mt-1">
+                    คัดสรรวัตถุดิบและพิถีพิถันในทุกขั้นตอนการชง
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Description -->
+            <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+              <div class="space-y-2">
+                <span
+                  class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-coffee-600 bg-coffee-100 px-3 py-1 rounded-full"
+                >
+                  แนวคิดและความเป็นมา
+                </span>
+                <h2
+                  class="text-3xl sm:text-4xl font-extrabold text-coffee-950 tracking-tight"
+                >
+                  จุดเริ่มต้นของความอบอุ่น <br />
+                  <span class="text-coffee-600">DTI SAU WOW COFFEE</span>
+                </h2>
+              </div>
+
+              <p class="text-base sm:text-lg text-coffee-700 leading-relaxed">
+                <strong>DTI SAU WOW COFFEE</strong>
+                ถือกำเนิดขึ้นจากความหลงใหลในกลิ่นและรสชาติของกาแฟและความตั้งใจที่จะสร้างมุมพักผ่อนเล็ก
+                ๆ ที่เข้าถึงง่ายสำหรับทุกคน ไม่ว่าจะเป็นนักศึกษา อาจารย์ บุคลากร
+                หรือคอกาแฟในพื้นที่
+              </p>
+
+              <p class="text-sm sm:text-base text-coffee-600 leading-relaxed">
+                เราเชื่อว่า "เครื่องดื่มที่ดีไม่จำเป็นต้องจ่ายแพง"
+                ทุกแก้วของเราจึงเลือกใช้เมล็ดกาแฟที่คั่วใหม่อย่างสม่ำเสมอ
+                ผงชาคัดสรร และโกโก้เกรดพรีเมียม
+                เพื่อให้ได้สัมผัสรสชาติที่เข้มข้น หอมละมุน
+                สร้างรอยยิ้มและคำอุทาน "WOW!" ให้กับทุกคนที่ได้ลิ้มลอง
+              </p>
+
+              <!-- Key points checklist -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                <div class="flex items-center gap-3">
+                  <span
+                    class="w-6 h-6 rounded-full bg-coffee-100 text-coffee-700 flex items-center justify-center text-xs font-bold"
+                    >✓</span
+                  >
+                  <span class="text-sm font-medium text-coffee-800"
+                    >เมล็ดกาแฟสด ชงสดใหม่แก้วต่อแก้ว</span
+                  >
+                </div>
+                <div class="flex items-center gap-3">
+                  <span
+                    class="w-6 h-6 rounded-full bg-coffee-100 text-coffee-700 flex items-center justify-center text-xs font-bold"
+                    >✓</span
+                  >
+                  <span class="text-sm font-medium text-coffee-800"
+                    >เครื่องดื่มชา & โกโก้สูตรเข้มข้นหวานน้อยได้</span
+                  >
+                </div>
+                <div class="flex items-center gap-3">
+                  <span
+                    class="w-6 h-6 rounded-full bg-coffee-100 text-coffee-700 flex items-center justify-center text-xs font-bold"
+                    >✓</span
+                  >
+                  <span class="text-sm font-medium text-coffee-800"
+                    >บริการเป็นกันเอง สั่งง่าย รวดเร็ว</span
+                  >
+                </div>
+                <div class="flex items-center gap-3">
+                  <span
+                    class="w-6 h-6 rounded-full bg-coffee-100 text-coffee-700 flex items-center justify-center text-xs font-bold"
+                    >✓</span
+                  >
+                  <span class="text-sm font-medium text-coffee-800"
+                    >ราคาเป็นมิตร สบายกระเป๋าสำหรับทุกคน</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+         4. FEATURED MENU SECTION
+         ======================================================== -->
+      <section id="menu" class="py-16 sm:py-24 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+            <span
+              class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-coffee-600 bg-coffee-100 px-3.5 py-1.5 rounded-full"
+            >
+              Recommended Menu
+            </span>
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold text-coffee-950 tracking-tight"
+            >
+              เมนูเครื่องดื่มยอดนิยม
+            </h2>
+            <p class="text-base text-coffee-700">
+              คัดสรร 6 เมนูซิกเนเจอร์ที่ได้รับความนิยมสูงสุด กลมกล่อม เข้มข้น
+              สดชื่น โดนใจทุกช่วงเวลาของวัน
+            </p>
+          </div>
+
+          <!-- Menu Grid (6 Items) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Menu Item 1 -->
+            <div
+              class="group bg-white rounded-3xl overflow-hidden border border-coffee-200/70 shadow-sm hover:shadow-warm-lg transition-all duration-300 flex flex-col"
+            >
+              <div
+                class="relative h-56 overflow-hidden bg-coffee-100 img-zoom-wrapper"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80"
+                  alt="Signature DTI Dirty Coffee กาแฟเดอร์ตี้รสเข้มหอมนมเย็น"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/600x400/4f3525/ffffff?text=Dirty+Coffee';
+                  "
+                />
+                <span
+                  class="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm"
+                >
+                  Signature Wow
+                </span>
+              </div>
+              <div
+                class="p-6 flex flex-col flex-grow justify-between space-y-4"
+              >
+                <div>
+                  <div class="flex items-start justify-between gap-2">
+                    <h3
+                      class="text-xl font-bold text-coffee-950 group-hover:text-coffee-600 transition-colors"
+                    >
+                      WOW Dirty Coffee
+                    </h3>
+                    <span
+                      class="text-lg font-extrabold text-coffee-800 whitespace-nowrap"
+                      >฿65</span
+                    >
+                  </div>
+                  <p class="text-xs text-coffee-500 font-medium mt-0.5">
+                    เอสเพรสโซ่ช็อตเข้มข้น + นมสดสูตรเย็นจัด
+                  </p>
+                  <p class="text-sm text-coffee-700 mt-2 line-clamp-2">
+                    เอสเพรสโซ่ช็อตเข้มข้นสกัดสดใหม่
+                    ไหลรินลงบนนมสดปรุงพิเศษที่แช่จนเย็นฉ่ำ
+                    สัมผัสความต่างของอุณหภูมิและความนุ่มละมุน
+                  </p>
+                </div>
+                <div
+                  class="pt-2 border-t border-coffee-100 flex items-center justify-between text-xs text-coffee-600"
+                >
+                  <span>🥛 ระดับความหวาน: ปกติ</span>
+                  <span class="text-coffee-500">เสิร์ฟแบบเย็น</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Menu Item 2 -->
+            <div
+              class="group bg-white rounded-3xl overflow-hidden border border-coffee-200/70 shadow-sm hover:shadow-warm-lg transition-all duration-300 flex flex-col"
+            >
+              <div
+                class="relative h-56 overflow-hidden bg-coffee-100 img-zoom-wrapper"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80"
+                  alt="Iced Americano Orange กาแฟส้มสดชื่น"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/600x400/4f3525/ffffff?text=Americano+Orange';
+                  "
+                />
+                <span
+                  class="absolute top-4 left-4 bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm"
+                >
+                  Best Seller
+                </span>
+              </div>
+              <div
+                class="p-6 flex flex-col flex-grow justify-between space-y-4"
+              >
+                <div>
+                  <div class="flex items-start justify-between gap-2">
+                    <h3
+                      class="text-xl font-bold text-coffee-950 group-hover:text-coffee-600 transition-colors"
+                    >
+                      Americano Orange Fresh
+                    </h3>
+                    <span
+                      class="text-lg font-extrabold text-coffee-800 whitespace-nowrap"
+                      >฿55</span
+                    >
+                  </div>
+                  <p class="text-xs text-coffee-500 font-medium mt-0.5">
+                    อเมริกาโน่เย็น + น้ำส้มแท้ 100%
+                  </p>
+                  <p class="text-sm text-coffee-700 mt-2 line-clamp-2">
+                    การผสมผสานที่ลงตัวระหว่างช็อตกาแฟคั่วกลางเข้มกับน้ำส้มรสเปรี้ยวอมหวาน
+                    ให้ความสดชื่นตื่นเต็มตาทันทีที่ดื่ม
+                  </p>
+                </div>
+                <div
+                  class="pt-2 border-t border-coffee-100 flex items-center justify-between text-xs text-coffee-600"
+                >
+                  <span>🍊 รสชาติ: เปรี้ยวอมหวาน หอมกาแฟ</span>
+                  <span class="text-coffee-500">เสิร์ฟแบบเย็น</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Menu Item 3 -->
+            <div
+              class="group bg-white rounded-3xl overflow-hidden border border-coffee-200/70 shadow-sm hover:shadow-warm-lg transition-all duration-300 flex flex-col"
+            >
+              <div
+                class="relative h-56 overflow-hidden bg-coffee-100 img-zoom-wrapper"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=600&q=80"
+                  alt="Uji Matcha Latte ชาเขียวมัทฉะเข้มข้นสไตล์ญี่ปุ่น"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/600x400/4f3525/ffffff?text=Matcha+Latte';
+                  "
+                />
+                <span
+                  class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm"
+                >
+                  Premium Tea
+                </span>
+              </div>
+              <div
+                class="p-6 flex flex-col flex-grow justify-between space-y-4"
+              >
+                <div>
+                  <div class="flex items-start justify-between gap-2">
+                    <h3
+                      class="text-xl font-bold text-coffee-950 group-hover:text-coffee-600 transition-colors"
+                    >
+                      Premium Matcha Latte
+                    </h3>
+                    <span
+                      class="text-lg font-extrabold text-coffee-800 whitespace-nowrap"
+                      >฿55</span
+                    >
+                  </div>
+                  <p class="text-xs text-coffee-500 font-medium mt-0.5">
+                    มัทฉะแท้เกรดพรีเมียม + นมสดนุ่ม
+                  </p>
+                  <p class="text-sm text-coffee-700 mt-2 line-clamp-2">
+                    ผงมัทฉะแท้สีเขียวเข้มข้น ตีสดใหม่แก้วต่อแก้ว หอมกลิ่นใบชาแท้
+                    ละมุนลิ้น ไม่ฝาดคอ เลือกความหวานได้ตามชอบ
+                  </p>
+                </div>
+                <div
+                  class="pt-2 border-t border-coffee-100 flex items-center justify-between text-xs text-coffee-600"
+                >
+                  <span>🍵 ปรับระดับความหวานได้ 0-100%</span>
+                  <span class="text-coffee-500">ร้อน / เย็น</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Menu Item 4 -->
+            <div
+              class="group bg-white rounded-3xl overflow-hidden border border-coffee-200/70 shadow-sm hover:shadow-warm-lg transition-all duration-300 flex flex-col"
+            >
+              <div
+                class="relative h-56 overflow-hidden bg-coffee-100 img-zoom-wrapper"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=600&q=80"
+                  alt="Dark Cocoa Supreme โกโก้พรีเมียมเข้มข้นโดนใจ"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/600x400/4f3525/ffffff?text=Dark+Cocoa';
+                  "
+                />
+                <span
+                  class="absolute top-4 left-4 bg-stone-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm"
+                >
+                  Choco Lover
+                </span>
+              </div>
+              <div
+                class="p-6 flex flex-col flex-grow justify-between space-y-4"
+              >
+                <div>
+                  <div class="flex items-start justify-between gap-2">
+                    <h3
+                      class="text-xl font-bold text-coffee-950 group-hover:text-coffee-600 transition-colors"
+                    >
+                      Dark Cocoa Supreme
+                    </h3>
+                    <span
+                      class="text-lg font-extrabold text-coffee-800 whitespace-nowrap"
+                      >฿50</span
+                    >
+                  </div>
+                  <p class="text-xs text-coffee-500 font-medium mt-0.5">
+                    ดาร์กโกโก้เข้มข้นหนืดสะใจ
+                  </p>
+                  <p class="text-sm text-coffee-700 mt-2 line-clamp-2">
+                    โกโก้นำเข้าแท้ชงแบบเข้มข้นสะใจ
+                    มีความหอมมันและความดาร์กที่ลงตัว เมนูขวัญใจคนไม่ดื่มกาแฟ
+                  </p>
+                </div>
+                <div
+                  class="pt-2 border-t border-coffee-100 flex items-center justify-between text-xs text-coffee-600"
+                >
+                  <span>🍫 เข้มข้น กลมกล่อม ไม่หวานเลี่ยน</span>
+                  <span class="text-coffee-500">ร้อน / เย็น</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Menu Item 5 -->
+            <div
+              class="group bg-white rounded-3xl overflow-hidden border border-coffee-200/70 shadow-sm hover:shadow-warm-lg transition-all duration-300 flex flex-col"
+            >
+              <div
+                class="relative h-56 overflow-hidden bg-coffee-100 img-zoom-wrapper"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=80"
+                  alt="Thai Milk Tea ชาไทยหอมเข้มสีสวย"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/600x400/4f3525/ffffff?text=Thai+Tea';
+                  "
+                />
+                <span
+                  class="absolute top-4 left-4 bg-amber-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm"
+                >
+                  Traditional
+                </span>
+              </div>
+              <div
+                class="p-6 flex flex-col flex-grow justify-between space-y-4"
+              >
+                <div>
+                  <div class="flex items-start justify-between gap-2">
+                    <h3
+                      class="text-xl font-bold text-coffee-950 group-hover:text-coffee-600 transition-colors"
+                    >
+                      Classic Thai Tea
+                    </h3>
+                    <span
+                      class="text-lg font-extrabold text-coffee-800 whitespace-nowrap"
+                      >฿45</span
+                    >
+                  </div>
+                  <p class="text-xs text-coffee-500 font-medium mt-0.5">
+                    ชาไทยโบราณสูตรใบชาแท้เข้มข้น
+                  </p>
+                  <p class="text-sm text-coffee-700 mt-2 line-clamp-2">
+                    ชาไทยสีส้มทองหอมอบอวล รสหวานมันกำลังดี ละมุนทุกจิบ
+                    เป็นแก้วเติมความกระปรี้กระเปร่าระหว่างวัน
+                  </p>
+                </div>
+                <div
+                  class="pt-2 border-t border-coffee-100 flex items-center justify-between text-xs text-coffee-600"
+                >
+                  <span>🍂 กลิ่นชาหอมเอกลักษณ์ไทยแท้</span>
+                  <span class="text-coffee-500">เสิร์ฟแบบเย็น</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Menu Item 6 -->
+            <div
+              class="group bg-white rounded-3xl overflow-hidden border border-coffee-200/70 shadow-sm hover:shadow-warm-lg transition-all duration-300 flex flex-col"
+            >
+              <div
+                class="relative h-56 overflow-hidden bg-coffee-100 img-zoom-wrapper"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80"
+                  alt="Peach Honey Sparkling Soda ชาพีชโซดาซ่าสดชื่น"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/600x400/4f3525/ffffff?text=Peach+Soda';
+                  "
+                />
+                <span
+                  class="absolute top-4 left-4 bg-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm"
+                >
+                  Refreshing
+                </span>
+              </div>
+              <div
+                class="p-6 flex flex-col flex-grow justify-between space-y-4"
+              >
+                <div>
+                  <div class="flex items-start justify-between gap-2">
+                    <h3
+                      class="text-xl font-bold text-coffee-950 group-hover:text-coffee-600 transition-colors"
+                    >
+                      Peach Honey Soda
+                    </h3>
+                    <span
+                      class="text-lg font-extrabold text-coffee-800 whitespace-nowrap"
+                      >฿45</span
+                    >
+                  </div>
+                  <p class="text-xs text-coffee-500 font-medium mt-0.5">
+                    พีชหวานหอม + น้ำผึ้งแท้ + โซดาซ่า
+                  </p>
+                  <p class="text-sm text-coffee-700 mt-2 line-clamp-2">
+                    เครื่องดื่มโซดารสพีชหวานฉ่ำ เคล้ากลิ่นน้ำผึ้งแท้
+                    ซ่าสดชื่นดับร้อน
+                    เหมาะกับการพักเบรกเติมพลังความกระปรี้กระเปร่า
+                  </p>
+                </div>
+                <div
+                  class="pt-2 border-t border-coffee-100 flex items-center justify-between text-xs text-coffee-600"
+                >
+                  <span>🍑 หอมหวาน ซ่าสดชื่น ดับกระหาย</span>
+                  <span class="text-coffee-500">เสิร์ฟแบบเย็น</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Note info below menu -->
+          <div
+            class="mt-12 text-center p-4 rounded-2xl bg-coffee-100/60 border border-coffee-200/70 max-w-2xl mx-auto"
+          >
+            <p class="text-xs sm:text-sm text-coffee-800 font-medium">
+              💡 มีตัวเลือกเปลี่ยนนมเป็น Oat Milk (+15.-)
+              และสามารถเลือกระดับความหวาน (0% / 25% / 50% / 100%) ได้ทุกแก้ว
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+         5. WHY CHOOSE US SECTION
+         ======================================================== -->
+      <section
+        id="why-us"
+        class="py-16 sm:py-24 bg-white border-y border-coffee-200/50"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+            <span
+              class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-coffee-600 bg-coffee-100 px-3 py-1 rounded-full"
+            >
+              Our Quality & Values
+            </span>
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold text-coffee-950 tracking-tight"
+            >
+              ทำไมต้อง DTI SAU WOW COFFEE?
+            </h2>
+            <p class="text-base text-coffee-700">
+              เราใส่ใจในทุกดีเทลเพื่อส่งมอบคุณภาพและรอยยิ้มให้กับลูกค้าคนพิเศษในทุกช่วงเวลา
+            </p>
+          </div>
+
+          <!-- 4 Key Advantages Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Card 1 -->
+            <div
+              class="p-8 rounded-3xl bg-cream border border-coffee-200/60 shadow-sm hover:shadow-warm transition-all duration-300 flex flex-col items-start group"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-coffee-800 text-amber-200 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+              >
+                <!-- Coffee Bean Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-7 h-7 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-coffee-950 mb-2">
+                วัตถุดิบคัดสรรคุณภาพ
+              </h3>
+              <p class="text-sm text-coffee-700 leading-relaxed">
+                ใช้เมล็ดกาแฟคั่วใหม่ที่ได้มาตรฐาน ชาใบแท้ และผงโกโก้เกรดพรีเมียม
+                เพื่อให้ได้กลิ่นหอมและรสสัมผัสที่ดีที่สุด
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="p-8 rounded-3xl bg-cream border border-coffee-200/60 shadow-sm hover:shadow-warm transition-all duration-300 flex flex-col items-start group"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-coffee-800 text-amber-200 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+              >
+                <!-- Beverage Variety Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-7 h-7 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-coffee-950 mb-2">
+                เมนูหลากหลาย
+              </h3>
+              <p class="text-sm text-coffee-700 leading-relaxed">
+                ตอบโจทย์ทั้งคอกาแฟเข้มข้น สายชาเขียว สายโกโก้หวานมัน
+                หรือสายโซดาสดชื่น มีเครื่องดื่มให้เลือกสรรตามอารมณ์
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="p-8 rounded-3xl bg-cream border border-coffee-200/60 shadow-sm hover:shadow-warm transition-all duration-300 flex flex-col items-start group"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-coffee-800 text-amber-200 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+              >
+                <!-- Friendly Price Tag Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-7 h-7 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-coffee-950 mb-2">
+                ราคาเข้าถึงง่าย สบายกระเป๋า
+              </h3>
+              <p class="text-sm text-coffee-700 leading-relaxed">
+                ราคาเริ่มต้นเพียง 35–65 บาท มอบความคุ้มค่าสูงสุดสำหรับนักเรียน
+                นักศึกษา และคนทำงาน ดื่มได้ทุกวันไม่รู้สึกผิด
+              </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="p-8 rounded-3xl bg-cream border border-coffee-200/60 shadow-sm hover:shadow-warm transition-all duration-300 flex flex-col items-start group"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-coffee-800 text-amber-200 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+              >
+                <!-- Warm Smile / Vibe Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-7 h-7 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-coffee-950 mb-2">
+                บรรยากาศเป็นกันเอง
+              </h3>
+              <p class="text-sm text-coffee-700 leading-relaxed">
+                ร้านอบอุ่น ต้อนรับด้วยรอยยิ้มและการบริการที่สุภาพ
+                เหมาะสำหรับแวะพักดื่มเครื่องดื่มหรือซื้อกลับอย่างสบายใจ
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+         6. GALLERY SECTION
+         ======================================================== -->
+      <section id="gallery" class="py-16 sm:py-24 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto space-y-3 mb-14">
+            <span
+              class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-coffee-600 bg-coffee-100 px-3 py-1 rounded-full"
+            >
+              Atmosphere & Moments
+            </span>
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold text-coffee-950 tracking-tight"
+            >
+              ภาพบรรยากาศและเครื่องดื่ม
+            </h2>
+            <p class="text-base text-coffee-700">
+              สัมผัสกลิ่นอายความอบอุ่นและสีสันความสดชื่นภายในร้าน DTI SAU WOW
+              COFFEE
+            </p>
+          </div>
+
+          <!-- Responsive Gallery Grid -->
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
+          >
+            <!-- Image 1 -->
+            <div
+              class="relative rounded-2xl overflow-hidden aspect-square shadow-sm img-zoom-wrapper group bg-coffee-200"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80"
+                alt="แก้วกาแฟลาเต้อาร์ตลายสวยงาม"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x400/4f3525/ffffff?text=Coffee+Art';
+                "
+              />
+              <div
+                class="absolute inset-0 bg-coffee-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+              >
+                <span class="text-white text-xs sm:text-sm font-medium"
+                  >Latte Art ฝีมือประณีต</span
+                >
+              </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div
+              class="relative rounded-2xl overflow-hidden aspect-square shadow-sm img-zoom-wrapper group bg-coffee-200"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80"
+                alt="มุมที่นั่งจิบกาแฟสบาย ๆ ภายในร้าน"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x400/735038/ffffff?text=Cozy+Corner';
+                "
+              />
+              <div
+                class="absolute inset-0 bg-coffee-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+              >
+                <span class="text-white text-xs sm:text-sm font-medium"
+                  >มุมผ่อนคลายสบายตา</span
+                >
+              </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div
+              class="relative rounded-2xl overflow-hidden aspect-square shadow-sm img-zoom-wrapper group bg-coffee-200"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=600&q=80"
+                alt="ขั้นตอนการดริปกาแฟสดกลิ่นหอมกรุ่น"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x400/4f3525/ffffff?text=Pour+Over';
+                "
+              />
+              <div
+                class="absolute inset-0 bg-coffee-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+              >
+                <span class="text-white text-xs sm:text-sm font-medium"
+                  >Pour-Over สกัดสดใหม่</span
+                >
+              </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div
+              class="relative rounded-2xl overflow-hidden aspect-square shadow-sm img-zoom-wrapper group bg-coffee-200"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80"
+                alt="กาแฟเย็นเสิร์ฟพร้อมน้ำแข็งฉ่ำใจ"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x400/735038/ffffff?text=Iced+Coffee';
+                "
+              />
+              <div
+                class="absolute inset-0 bg-coffee-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+              >
+                <span class="text-white text-xs sm:text-sm font-medium"
+                  >สดชื่น เย็นชื่นใจ</span
+                >
+              </div>
+            </div>
+
+            <!-- Image 5 -->
+            <div
+              class="relative rounded-2xl overflow-hidden aspect-square shadow-sm img-zoom-wrapper group bg-coffee-200"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1579992357154-faf4bde95b3d?auto=format&fit=crop&w=600&q=80"
+                alt="เมล็ดกาแฟคั่วเข้มคุณภาพดี"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x400/4f3525/ffffff?text=Beans';
+                "
+              />
+              <div
+                class="absolute inset-0 bg-coffee-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+              >
+                <span class="text-white text-xs sm:text-sm font-medium"
+                  >เมล็ดกาแฟคัดเกรดพรีเมียม</span
+                >
+              </div>
+            </div>
+
+            <!-- Image 6 -->
+            <div
+              class="relative rounded-2xl overflow-hidden aspect-square shadow-sm img-zoom-wrapper group bg-coffee-200"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=600&q=80"
+                alt="การบริการด้วยรอยยิ้มที่เคาน์เตอร์บาร์"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x400/735038/ffffff?text=Barista';
+                "
+              />
+              <div
+                class="absolute inset-0 bg-coffee-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+              >
+                <span class="text-white text-xs sm:text-sm font-medium"
+                  >บริการอบอุ่นเป็นกันเอง</span
+                >
+              </div>
+            </div>
+
+            <!-- Image 7 -->
+            <div
+              class="relative rounded-2xl overflow-hidden aspect-square shadow-sm img-zoom-wrapper group bg-coffee-200"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
+                alt="แก้วกาแฟร้อนในยามเช้า"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x400/4f3525/ffffff?text=Morning+Coffee';
+                "
+              />
+              <div
+                class="absolute inset-0 bg-coffee-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+              >
+                <span class="text-white text-xs sm:text-sm font-medium"
+                  >เริ่มต้นวันใหม่อย่างสดใส</span
+                >
+              </div>
+            </div>
+
+            <!-- Image 8 -->
+            <div
+              class="relative rounded-2xl overflow-hidden aspect-square shadow-sm img-zoom-wrapper group bg-coffee-200"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+                alt="บรรยากาศการตกแต่งร้านสไตล์โมเดิร์นโคซี่"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x400/735038/ffffff?text=Cafe+Vibe';
+                "
+              />
+              <div
+                class="absolute inset-0 bg-coffee-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+              >
+                <span class="text-white text-xs sm:text-sm font-medium"
+                  >สเปซสบาย ๆ สไตล์โมเดิร์น</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+         7. CONTACT & LOCATION SECTION
+         ======================================================== -->
+      <section
+        id="contact"
+        class="py-16 sm:py-24 bg-white border-t border-coffee-200/50"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto space-y-3 mb-14">
+            <span
+              class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-coffee-600 bg-coffee-100 px-3 py-1 rounded-full"
+            >
+              Visit & Contact Us
+            </span>
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold text-coffee-950 tracking-tight"
+            >
+              แวะมาสัมผัสความอร่อยได้แล้ววันนี้
+            </h2>
+            <p class="text-base text-coffee-700">
+              พร้อมต้อนรับคุณด้วยกาแฟหอมกรุ่นและเครื่องดื่มสดชื่นทุกวัน
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            <!-- Contact Information Card -->
+            <div
+              class="lg:col-span-5 bg-cream rounded-3xl p-8 border border-coffee-200/70 shadow-sm flex flex-col justify-between space-y-8"
+            >
+              <div class="space-y-6">
+                <h3 class="text-2xl font-bold text-coffee-950">
+                  ข้อมูลร้านค้า
+                </h3>
+
+                <!-- Address Item -->
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-coffee-800 text-amber-100 flex items-center justify-center shrink-0 mt-1"
+                  >
+                    <!-- Map Pin Icon -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-5 h-5 fill-current"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-coffee-900">
+                      ที่ตั้งของร้าน (Location)
+                    </h4>
+                    <!-- [EDITABLE]: แก้ไขที่อยู่จริงของร้านได้ที่นี่ -->
+                    <p class="text-sm text-coffee-700 mt-0.5">
+                      อาคารสาขาวิชาเทคโนโลยีดิจิทัลและนวัตกรรม (DTI)
+                      มหาวิทยาลัยเอเชียอาคเนย์ (SAU) <br />
+                      เลขที่ 19/1 ถนนเพชรเกษม แขวงหนองค้างพลู เขตหนองแขม
+                      กรุงเทพฯ 10160
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Opening Hours Item -->
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-coffee-800 text-amber-100 flex items-center justify-center shrink-0 mt-1"
+                  >
+                    <!-- Clock Icon -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-5 h-5 fill-current"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-coffee-900">
+                      เวลาทำการ (Opening Hours)
+                    </h4>
+                    <ul class="text-sm text-coffee-700 space-y-1 mt-0.5">
+                      <li>
+                        <strong class="text-coffee-800">จันทร์ – ศุกร์:</strong>
+                        07:30 – 17:00 น.
+                      </li>
+                      <li>
+                        <strong class="text-coffee-800">เสาร์:</strong> 08:30 –
+                        16:00 น.
+                      </li>
+                      <li>
+                        <strong class="text-rose-700">อาทิตย์:</strong> ปิดทำการ
+                        (Closed)
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Phone & Social Item -->
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-coffee-800 text-amber-100 flex items-center justify-center shrink-0 mt-1"
+                  >
+                    <!-- Phone Icon -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-5 h-5 fill-current"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1.01A11.36 11.36 0 0 1 8.5 3.9c0-.5-.49-.9-1-.9H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.51-.45-.92-.99-.92z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-coffee-900">
+                      ติดต่อสอบถาม (Contact)
+                    </h4>
+                    <p class="text-sm text-coffee-700 mt-0.5">
+                      โทร:
+                      <a
+                        href="tel:028074500"
+                        class="hover:underline font-semibold text-coffee-800"
+                        >02-807-4500 ต่อ DTI Coffee</a
+                      >
+                      <br />
+                      LINE Official:
+                      <span class="text-coffee-800 font-semibold"
+                        >@dtisauwowcoffee</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social Media Buttons -->
+              <div class="pt-6 border-t border-coffee-200">
+                <span
+                  class="text-xs uppercase font-semibold text-coffee-600 block mb-3"
+                  >ติดตามโปรโมชั่น & อัปเดตเมนู</span
+                >
+                <div class="flex items-center gap-3">
+                  <a
+                    href="#contact"
+                    aria-label="Facebook Page"
+                    class="w-10 h-10 rounded-xl bg-white border border-coffee-200 text-coffee-800 flex items-center justify-center hover:bg-coffee-800 hover:text-white transition-colors"
+                  >
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="#contact"
+                    aria-label="Instagram"
+                    class="w-10 h-10 rounded-xl bg-white border border-coffee-200 text-coffee-800 flex items-center justify-center hover:bg-coffee-800 hover:text-white transition-colors"
+                  >
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="#contact"
+                    aria-label="LINE Official"
+                    class="w-10 h-10 rounded-xl bg-white border border-coffee-200 text-coffee-800 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors"
+                  >
+                    <span class="font-extrabold text-xs">LINE</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Location / Map Card -->
+            <div
+              class="lg:col-span-7 bg-cream-warm rounded-3xl overflow-hidden border border-coffee-200/70 shadow-sm flex flex-col"
+            >
+              <div
+                class="p-6 bg-coffee-100/70 border-b border-coffee-200 flex items-center justify-between"
+              >
+                <div>
+                  <h4 class="font-bold text-coffee-950">
+                    แผนที่ร้าน DTI SAU WOW COFFEE
+                  </h4>
+                  <p class="text-xs text-coffee-600">
+                    ตั้งอยู่ใจกลางอาคาร DTI สะดวก สบาย มีที่จอดรถ
+                  </p>
+                </div>
+                <a
+                  href="https://maps.google.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-coffee-800 text-cream text-xs font-medium hover:bg-coffee-700 transition-colors shadow-sm"
+                >
+                  <span>เปิดใน Google Maps</span>
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <!-- Stylized Graphic Map Representation -->
+              <div
+                class="relative flex-grow min-h-[300px] bg-coffee-200/40 p-6 flex items-center justify-center overflow-hidden"
+              >
+                <!-- Decorative map grid pattern -->
+                <div
+                  class="absolute inset-0 opacity-15"
+                  style="
+                    background-image: radial-gradient(
+                      #4f3525 1.5px,
+                      transparent 1.5px
+                    );
+                    background-size: 24px 24px;
+                  "
+                ></div>
+
+                <!-- Mock Landmark Map Elements -->
+                <div
+                  class="relative z-10 w-full max-w-md bg-white/95 backdrop-blur-md p-6 rounded-2xl border border-coffee-200 shadow-md text-center space-y-3"
+                >
+                  <div
+                    class="w-12 h-12 mx-auto rounded-full bg-red-100 text-red-600 flex items-center justify-center animate-bounce"
+                  >
+                    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                      />
+                    </svg>
+                  </div>
+                  <h5 class="text-base font-bold text-coffee-950">
+                    DTI SAU WOW COFFEE PIN POINT
+                  </h5>
+                  <p class="text-xs text-coffee-700 leading-relaxed">
+                    จุดสังเกต: ชั้น 1 อาคารสาขาวิชาเทคโนโลยีดิจิทัลและนวัตกรรม
+                    (DTI) ใกล้ลานกิจกรรมกลาง มหาวิทยาลัยเอเชียอาคเนย์
+                  </p>
+                  <div class="pt-2">
+                    <span
+                      class="inline-block px-3 py-1 bg-amber-50 text-amber-800 border border-amber-200 rounded-full text-xs font-semibold"
+                    >
+                      📍 พิกัดพร้อมต้อนรับทุกคน
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========================================================
+       8. FOOTER SECTION
+       ======================================================== -->
+    <footer class="bg-coffee-950 text-coffee-200 border-t border-coffee-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <!-- Brand Col -->
+          <div class="md:col-span-2 space-y-4">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-8 h-8 rounded-xl overflow-hidden border border-coffee-700/80 bg-coffee-900 flex-shrink-0"
+              >
+                <img
+                  src="images/logo.jpg"
+                  alt="DTI SAU WOW COFFEE Logo"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <span class="text-xl font-bold tracking-tight text-white">
+                DTI SAU <span class="text-amber-400">WOW</span> COFFEE
+              </span>
+            </div>
+            <p class="text-sm text-coffee-300 max-w-sm leading-relaxed">
+              ร้านกาแฟและเครื่องดื่มคัดสรร รสชาติพรีเมียมในราคาจับต้องได้
+              เติมเต็มพลังแห่งความสุขและความสดชื่นในทุกแก้วที่คุณดื่ม
+            </p>
+          </div>
+
+          <!-- Quick Links Col -->
+          <div class="space-y-3">
+            <h4 class="text-sm font-bold text-white uppercase tracking-wider">
+              เมนูนำทาง
+            </h4>
+            <ul class="text-sm space-y-2 text-coffee-300">
+              <li>
+                <a href="#home" class="hover:text-amber-400 transition-colors"
+                  >หน้าแรก</a
+                >
+              </li>
+              <li>
+                <a href="#about" class="hover:text-amber-400 transition-colors"
+                  >เกี่ยวกับเรา</a
+                >
+              </li>
+              <li>
+                <a href="#menu" class="hover:text-amber-400 transition-colors"
+                  >เมนูเครื่องดื่ม</a
+                >
+              </li>
+              <li>
+                <a href="#why-us" class="hover:text-amber-400 transition-colors"
+                  >จุดเด่นของร้าน</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#gallery"
+                  class="hover:text-amber-400 transition-colors"
+                  >ภาพบรรยากาศ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Operating Hours Col -->
+          <div class="space-y-3">
+            <h4 class="text-sm font-bold text-white uppercase tracking-wider">
+              เวลาให้บริการ
+            </h4>
+            <p class="text-sm text-coffee-300">
+              จันทร์ - ศุกร์ : 07:30 - 17:00 น.<br />
+              เสาร์ : 08:30 - 16:00 น.<br />
+              <span class="text-amber-400">ปิดทุกวันอาทิตย์</span>
+            </p>
+            <div class="pt-2">
+              <span
+                class="inline-flex items-center gap-1.5 text-xs text-emerald-400 font-medium"
+              >
+                <span
+                  class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"
+                ></span>
+                เปิดให้บริการตามปกติ
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div
+          class="pt-8 border-t border-coffee-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-coffee-400"
+        >
+          <p>© 2026 DTI SAU WOW COFFEE. สงวนลิขสิทธิ์ทุกประการ</p>
+          <p class="text-coffee-500">Created by Sakda Wangsuk 6952D10010</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button
+      id="back-to-top"
+      type="button"
+      aria-label="Back to top"
+      class="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-coffee-800 text-cream shadow-warm hover:bg-coffee-700 focus:outline-none transition-all duration-300 opacity-0 pointer-events-none translate-y-4"
+    >
+      <svg
+        class="w-5 h-5"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2.5"
+          d="M5 15l7-7 7 7"
+        />
+      </svg>
+    </button>
+
+    <!-- ========================================================
+       9. VANILLA JAVASCRIPT LOGIC
+       ======================================================== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const hamburgerIcon = document.getElementById("hamburger-icon");
+        const closeIcon = document.getElementById("close-icon");
+        const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+        const toggleMenu = () => {
+          const isHidden = mobileMenu.classList.contains("hidden");
+          if (isHidden) {
+            mobileMenu.classList.remove("hidden");
+            hamburgerIcon.classList.add("hidden");
+            closeIcon.classList.remove("hidden");
+          } else {
+            mobileMenu.classList.add("hidden");
+            hamburgerIcon.classList.remove("hidden");
+            closeIcon.classList.add("hidden");
+          }
+        };
+
+        if (mobileMenuBtn) {
+          mobileMenuBtn.addEventListener("click", toggleMenu);
+        }
+
+        // Close mobile menu when clicking any mobile link
+        mobileNavLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            if (!mobileMenu.classList.contains("hidden")) {
+              toggleMenu();
+            }
+          });
+        });
+
+        // 2. Back to Top Button Visibility on Scroll
+        const backToTopBtn = document.getElementById("back-to-top");
+
+        window.addEventListener(
+          "scroll",
+          () => {
+            if (window.scrollY > 400) {
+              backToTopBtn.classList.remove(
+                "opacity-0",
+                "pointer-events-none",
+                "translate-y-4",
+              );
+              backToTopBtn.classList.add("opacity-100", "translate-y-0");
+            } else {
+              backToTopBtn.classList.add(
+                "opacity-0",
+                "pointer-events-none",
+                "translate-y-4",
+              );
+              backToTopBtn.classList.remove("opacity-100", "translate-y-0");
+            }
+          },
+          { passive: true },
+        );
+
+        backToTopBtn.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
